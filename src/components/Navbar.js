@@ -74,16 +74,14 @@ export const NavStyles = styled.nav`
     img {
       margin-left: 0px;
       width: 250px !important;
-      margin-top: 9px;
-      @media (min-width: 768px) {
-        width: 100px;
+      margin-top: 0;
+      @media (max-width: 768px) {
+        width: 190px !important;
       }
       @media (max-width: 991px) {
         /* margin-left:30px; */
       }
-      @media (min-width: 1200px) {
-        width: 120px;
-      }
+   
     }
   }
   .nav-links {

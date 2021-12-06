@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/AnalogicaIcon.png",
+        icon: "src/images/anaIcon.png",
       },
     },
     // {

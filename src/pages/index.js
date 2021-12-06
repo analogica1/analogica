@@ -2,17 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import VideoBanner from "../components/videoBanner";
 import WhatweDO from "../components/WhatWeDo";
-import { useStaticQuery, graphql } from "gatsby";
-import RightImage from "../components/RightImage";
-import LeftImage from "../components/LeftImage";
+import { graphql } from "gatsby";
+import SEO from "../components/Seo/seo"
 import OurWork from "../components/OurWork";
 import TechnologyStackCarousel from "../components/TechnologyStackCarousel";
-import logo from "../images/AnalogicaIcon.png";
 import WhoWeAre from "../components/WhoareWe";
 import WhatWeAreThinking from "../components/Whatweare";
 import LeftOrRIght from "../components/LeftOrRIght";
 
-function Index({ data }) {
+function Index({ data, location }) {
   const {
     what_we_do,
     technology_stacks,
@@ -23,10 +21,20 @@ function Index({ data }) {
     news,
     empowering_bottom_section,
     video_banner,
+    Seo
   } = data.strapiHome;
 
   return (
     <Wrapper>
+      {Seo && (
+        <SEO
+          title={Seo.metaTitle}
+          description={Seo.metaDescription}
+          image={Seo.metaImage.url}
+          location={`${location.pathname}`}
+          keywords={Seo.metaKeywords_seperate_by_comma}
+        />
+      )}
       <VideoBanner data={video_banner} />
       <WhatweDO data={what_we_do} />
       <LeftOrRIght data={grid_left_or_right} />
@@ -162,6 +170,15 @@ export const query = graphql`
           localFile {
             publicURL
           }
+          url
+        }
+      }
+      Seo {
+        id
+        metaDescription
+        metaKeywords_seperate_by_comma
+        metaTitle
+        metaImage {
           url
         }
       }
