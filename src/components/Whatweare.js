@@ -231,7 +231,6 @@ const Wrapper = styled.div`
     }
     img {
       width: 100%;
-      height: 302px;
 
       @media (max-width: 479px) {
         height: auto;

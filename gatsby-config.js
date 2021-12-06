@@ -10,7 +10,7 @@ module.exports = {
     siteUrl: "https://analogica.in",
     titleTemplate: "Analogic Template",
 
-    title: "Analogica",
+    title: "Analogica Software Development Pvt Ltd",
     description: "Courses",
     author: "analogica",
     authorSite: "",
