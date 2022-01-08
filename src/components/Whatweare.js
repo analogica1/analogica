@@ -213,13 +213,11 @@ const Wrapper = styled.div`
   }
   .rectangle_box {
     width: 100%;
-    height: 302px;
     background-color: #000000;
     border-radius: 5px;
     display: block;
     .gatsby-image-wrapper {
       width: auto;
-      height: 302px;
       border-radius: 6px;
       @media (max-width: 479px) {
       height: auto;

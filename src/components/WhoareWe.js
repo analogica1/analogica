@@ -119,7 +119,6 @@ const Wrapper = styled.div`
     position: absolute;
     width: 100%;
     height: 60%;
-    background-color: #000000;
     border-radius: 5px;
     bottom: 0;
     margin-bottom: -170px;
